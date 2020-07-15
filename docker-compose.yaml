@@ -1,0 +1,11 @@
+version: "2"
+services:
+  node:
+    image: "node:12"
+    user: "node"
+    working_dir: $PWD
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:$PWD
+    command: "node index.js"
