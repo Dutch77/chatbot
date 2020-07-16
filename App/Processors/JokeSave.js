@@ -1,16 +1,18 @@
-const Save = require('./Save');
 const fs = require('fs');
 const _ = require('lodash');
 
-class SaveJoke extends Save {
+class JokeSave {
     path = 'jokes';
 
     getCommandName() {
-        return '$saveJoke';
+        return '$jokeSave';
+    }
+
+    getCommandDescription() {
+        return `${this.getCommandName()} - saves joke ($jokeSave text of joke here)`;
     }
 
     async respondToCommand(joke) {
-        console.log(joke)
         if (!joke) {
             return;
         }
@@ -24,4 +26,4 @@ class SaveJoke extends Save {
     }
 }
 
-module.exports = SaveJoke;
+module.exports = JokeSave;

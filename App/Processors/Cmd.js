@@ -9,6 +9,10 @@ class Cmd {
         return '$cmd';
     }
 
+    getCommandDescription() {
+        return `${this.getCommandName()} - executes saved expression ($cmd random)`;
+    }
+
     async respondToCommand(input) {
         const database = JSON.parse(fs.readFileSync('database.json'));
 

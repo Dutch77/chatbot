@@ -7,6 +7,10 @@ class Joke {
         return '$joke';
     }
 
+    getCommandDescription() {
+        return `${this.getCommandName()} - prints a random joke`;
+    }
+
     async respondToCommand() {
         const database = JSON.parse(fs.readFileSync('database.json'));
         const jokes =  _.get(database, [this.path], []);

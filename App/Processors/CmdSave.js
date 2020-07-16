@@ -1,11 +1,15 @@
 const _ = require('lodash');
 const fs = require('fs');
 
-class Save {
-    path = 'store';
+class CmdSave {
+    path = 'commands';
 
     getCommandName() {
-        return '$save';
+        return '$cmdSave';
+    }
+
+    getCommandDescription() {
+        return `${this.getCommandName()} - saves expression ($cmdSave random _.random(666))`;
     }
 
     async respondToCommand(command) {
@@ -16,6 +20,9 @@ class Save {
         const matches = regex.exec(command);
         const key = _.get(matches, [1]);
         const value = _.get(matches, [3]);
+
+        console.log(key, value)
+
         const database = JSON.parse(fs.readFileSync('database.json'));
         if (key && value) {
             _.set(database, [this.path, key], value);
@@ -25,4 +32,4 @@ class Save {
     }
 }
 
-module.exports = Save;
+module.exports = CmdSave;

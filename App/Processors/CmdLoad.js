@@ -1,10 +1,16 @@
 const _ = require('lodash');
 const fs = require('fs');
 
-class Load {
-    path = 'store';
+class CmdLoad {
+
+    path = 'jokes';
+
     getCommandName() {
-        return '$load';
+        return '$cmdLoad';
+    }
+
+    getCommandDescription() {
+        return `${this.getCommandName()} - loads saved command ($cmdLoad test)`;
     }
 
     async respondToCommand(key) {
@@ -13,4 +19,4 @@ class Load {
     }
 }
 
-module.exports = Load;
+module.exports = CmdLoad;

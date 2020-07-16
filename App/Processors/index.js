@@ -1,21 +1,29 @@
-const Load = require('./Load');
-const Save = require('./Save');
-const List = require('./List');
-const Joke = require('./Joke');
-const SaveJoke = require('./SaveJoke');
-const CommandList = require('./CommandList');
-const Eval = require('./Eval');
-const SaveCmd = require('./SaveCmd');
 const Cmd = require('./Cmd');
+const CmdSave = require('./CmdSave');
+const CmdList = require('./CmdList');
+const CmdLoad = require('./CmdLoad');
+const CmdDelete = require('./CmdDelete');
+const Eval = require('./Eval');
+const Help = require('./Help');
+const Joke = require('./Joke');
+const JokeSave = require('./JokeSave');
+const Var = require('./Var');
+const VarList = require('./VarList');
+const VarSave = require('./VarSave');
+const VarDelete = require('./VarDelete');
 
 module.exports = [
-    new Load(),
-    new Save(),
-    new List(),
-    new Joke(),
-    new SaveJoke(),
-    new CommandList(),
-    new Eval(),
-    new SaveCmd(),
     new Cmd(),
+    new CmdSave(),
+    new CmdList(),
+    new CmdLoad(),
+    new CmdDelete(),
+    new Eval(),
+    new Help(),
+    new Joke(),
+    new JokeSave(),
+    new Var(),
+    new VarList(),
+    new VarSave(),
+    new VarDelete(),
 ]
