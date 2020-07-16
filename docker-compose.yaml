@@ -8,4 +8,5 @@ services:
       - NODE_ENV=production
     volumes:
       - ./:$PWD
-    command: "node index.js"
+      - "/etc/localtime:/etc/localtime:ro"
+    command: node index.js

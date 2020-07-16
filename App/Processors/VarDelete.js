@@ -6,11 +6,11 @@ class VarDelete {
     path = 'store';
 
     getCommandName() {
-        return '$cmdDelete';
+        return '$varDelete';
     }
 
     getCommandDescription() {
-        return `${this.getCommandName()} - deletes saved command ($cmdDelete test)`;
+        return `${this.getCommandName()} - deletes saved var ($varDelete test)`;
     }
 
     async respondToCommand(key) {
