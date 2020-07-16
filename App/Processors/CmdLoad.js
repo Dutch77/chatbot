@@ -3,7 +3,7 @@ const fs = require('fs');
 
 class CmdLoad {
 
-    path = 'jokes';
+    path = 'commands';
 
     getCommandName() {
         return '$cmdLoad';
