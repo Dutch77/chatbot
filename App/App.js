@@ -19,6 +19,7 @@ class App {
         this.api.listenMqtt(async (error, message) => {
             await this.processMessage(message.body, message.threadID)
         });
+        // await this.processMessage('$help', 666)
     }
 
     async processMessage(message, threadId) {

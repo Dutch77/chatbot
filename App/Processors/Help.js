@@ -14,7 +14,7 @@ class Help {
         const processors = require('./index');
         return _.chain(processors)
             .map((processor) => processor.getCommandDescription() || processor.getCommandName())
-            .join('\\n')
+            .join('\n')
             .value();
     }
 }
