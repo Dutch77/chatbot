@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "facebook-chat-api": "^1.8.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "safe-eval": "^0.4.1"
   },
   "devDependencies": {},
